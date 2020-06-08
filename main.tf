@@ -2,6 +2,10 @@ provider "aws" {
   region = var.region
 }
 
+resource "random_pet" "my_random_pet" {
+
+}
+
 resource "aws_s3_bucket" "bucket" {
   bucket = "${var.prefix}-${var.name}"
   acl    = "public-read"
